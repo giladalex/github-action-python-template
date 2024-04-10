@@ -30,6 +30,6 @@ runs:
       run: python src/get_num_square.py
       shell: bash
     - name: Fetch the number's cubed
-      id: get-square
-      run: python src/get_num_square.py
+      id: get-cube
+      run: python src/get_num_cubed.py
       shell: bash
