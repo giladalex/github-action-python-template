@@ -14,6 +14,19 @@ jobs:
         uses: ./ # Uses an action in the root directory
         # or use a released GitHub Action
         with:
-          num: 11.5
+          num: 3
       - name: Print the square
         run: echo "${{ steps.get_square.outputs.num_squared }}"
+  get-num-cubed:
+    runs-on: ubuntu-latest
+    name: Returns the number cubed
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Fetch num cubed
+        id: get_cubed
+        uses: ./
+        with:
+          num: 3
+      - name: Print the square
+        run: echo "${{ steps.get_cubed.outputs.num_cubed }}"
